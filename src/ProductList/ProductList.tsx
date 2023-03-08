@@ -3,8 +3,7 @@ import { Link, Outlet, useLocation, useParams } from "react-router-dom"
 import Product from "./Product"
 import "./ProductList.moudule.css"
 import { useRecoilValue } from "recoil"
-import { productsState } from "../atom"
-import { Helmet } from "react-helmet"
+import { productsState } from "@atom"
 
 const carouselOperation = (number:number,value:number) => {
     return number+value
@@ -16,9 +15,9 @@ const carousel = (result:number,categoryBoxRef:React.RefObject<HTMLDivElement>
     setCategoryCarousel(result)
 } 
 const  ProductList = ()=> {
-    const {drink} = useParams()
-    const {pathname} = useLocation()
     const [category,setCategory] = useState<string[]>([])
+    const {pathname} = useLocation()
+    const {drink} = useParams()
     const [categoryCarousel,setCategoryCarousel]=useState(0)
     const products = useRecoilValue(productsState)
     const categoryBoxRef = useRef<HTMLDivElement>(null)
@@ -30,9 +29,7 @@ const  ProductList = ()=> {
     const categoryState = [...state,item.category]
     const imporveCategoryState = new Set(categoryState)
     return[...Array.from(imporveCategoryState)]}))}},[products])
-    return (<>
-    <Helmet title={drink?drink:"StarBucks"}/>
-    <div className="categoryBox">
+    return (<><div className="categoryBox">
     <div className="carosel-button" 
     onClick={()=>{const res = carouselOperation(categoryCarousel,30)
     if(categoryCarousel<0)carousel(res,categoryBoxRef,setCategoryCarousel)}}>&#60;</div>

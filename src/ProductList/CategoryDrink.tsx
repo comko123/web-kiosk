@@ -1,9 +1,9 @@
 import DrinkList from "./DrinkList"
 import { useEffect, useState } from "react"
 import { useParams } from "react-router-dom"
-import { ISelectMenu } from "../MainIndex"
+import { ISelectMenu } from "@MainIndex"
 import { useRecoilValue } from "recoil"
-import { productsState } from "../atom"
+import { productsState } from "@atom"
 export interface ICategoryDrinkOutlet {
     products:ISelectMenu[]
 }

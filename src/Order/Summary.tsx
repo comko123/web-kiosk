@@ -1,12 +1,12 @@
-import { ISelectMenu } from "../Main"
+import { ISelectMenu } from "@MainIndex"
 import BtnList from "./OrderSection/BtnList/BtnList"
 import CancleBtn from "./OrderSection/UserSelectOption/CancleBtn"
 import PhNumber from "./OrderSection/PhNumber/PhNumber"
 import "./Summary.moudule.css"
 import { useMutation } from "react-query"
-import { outputProductList } from "../api"
+import { outputProductList } from "@api"
 import { useRecoilValue } from "recoil"
-import { itemsState, userData } from "../atom"
+import { itemsState, userData } from "@atom"
 export interface IUserInfo{
 receiveType:string
 phoneNumber:number|null
@@ -21,8 +21,8 @@ const Summary = () => {
     const data = useRecoilValue(userData)
     const {mutate} = useMutation("UserSelectOrderList",
     ()=>outputProductList(items,data.phoneNumber,data.receiveType),
-/* {onError: () => { alert('서버 장애') },
-    onSuccess: () => { alert('주문이 정상적으로 접수되었습니다.');window.location.replace('/')}}*/)
+    {onError: () => { alert('서버 장애') },
+    onSuccess: () => { alert('주문이 정상적으로 접수되었습니다.');window.location.replace('/')}})
     return (<><div className="summartBox">
     <h5 className="m-0 p-0"><b className="witeText textdefault-span">결제 내역</b></h5></div> 
     <CancleBtn/>

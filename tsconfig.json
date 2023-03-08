@@ -14,7 +14,10 @@
     "resolveJsonModule": true,
     "isolatedModules": true,
     "noEmit": true,
-    "jsx": "react-jsx"
+    "jsx": "react-jsx",
+    "baseUrl": "src",
+    "paths": {"@atom":["atom"],"@api":["api"],"@MainIndex":["MainIndex"]}
+    //절대 경로 - compilerOptions - @atom = atom이라는 이름을 가진 파일  file @atom/* = atom이라는 이름을 가진 folder안 모든 file
   },
   "include": ["src"],
   "references": [{ "path": "./tsconfig.node.json" }]

@@ -1,5 +1,5 @@
 import axios from "axios"
-import { ISelectMenu } from "./Main"
+import { ISelectMenu } from "./MainIndex"
 
 class userOrderList{
 orderItems;phoneNumber;receiveType;   
@@ -14,6 +14,5 @@ export const inputProductList = async() => {
 }
 export const outputProductList = async(orderItems: ISelectMenu[],phoneNumber:number|null,receiveType:string) => {
     const orderList = new userOrderList(orderItems,phoneNumber,receiveType)
-    console.log(orderList)
-    // await(await axios.post('http://localhost:8080/api/v1/orders',orderList)).data
+    await(await axios.post('http://localhost:8080/api/v1/orders',orderList)).data
 }
