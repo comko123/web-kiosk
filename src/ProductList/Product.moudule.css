@@ -1,0 +1,18 @@
+.text-site{text-align: center;}
+.eclips{
+    display: block !important;
+    width:168px;
+    overflow:hidden;
+    white-space: nowrap;
+    text-overflow:ellipsis;
+}
+@media(max-width: 767px){
+    .text-site{text-align:right;}
+    .colspan,.btn-outline-dark{
+        font-size:0.5rem;
+        font-weight: 600;
+    }
+    .media-margin{
+        margin-top: 7px;
+    }
+}

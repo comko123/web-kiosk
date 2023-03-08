@@ -1,0 +1,14 @@
+#pow{
+    display:flex;
+    height:100%;
+    align-content:center;
+}
+#paw{
+    margin-left:2vw;
+    margin-top:12px;
+}
+@media(max-width: 767px){
+    #paw{
+        margin-left:0.1vw;
+    }
+}

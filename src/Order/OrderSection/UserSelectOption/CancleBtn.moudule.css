@@ -1,0 +1,25 @@
+.selectPayList{
+    display:flex;
+    justify-content:space-between;
+    border:3px solid rgba(0, 106, 42, 0.9);
+    flex-wrap:wrap;
+    background-color:white;
+    margin:10px 0;
+    border-radius:8px;
+    padding:5px;
+}
+.cancleBtn{
+    border:none;
+    border-radius:8px;
+    height:20px;
+    aspect-ratio: 1/1;
+    text-align:center;
+    cursor:pointer;
+    display: flex;
+    font-weight: 600;
+    align-items: flex-end;
+    justify-content: center;
+    background-color:tomato;
+    color:white;
+    margin:2px 0px 2px 10px;
+}

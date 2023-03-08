@@ -1,0 +1,17 @@
+.detailBoxSummaryOptionText{
+    top:10.6em;
+    width:35%;
+    position:absolute;
+    text-align:center;
+    font-weight:900;
+    color:orange;
+    font-size:15px;
+    background:repeating-linear-gradient(45deg, white, white 10px, #4254FF 0, #4254FF 20px);
+    opacity:0.96;
+  }
+  @media(max-width: 767px){
+    .detailBoxSummaryOptionText{
+      top:9em;
+      width:42%;
+    }
+  }

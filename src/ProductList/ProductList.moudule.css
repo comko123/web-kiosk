@@ -1,0 +1,92 @@
+.categoryBox{
+    display: flex;
+    flex-wrap: wrap;
+    width:100%;
+    justify-content: space-between;
+    align-items: center;
+    margin : 20px 0;
+    border : 3px solid rgba(0, 106, 42, 0.9);
+    border-radius: 10px;
+    padding: 5px 8px;
+}
+.categoryList{
+    border-radius: 15px;
+    padding:10px 0;
+    box-sizing: border-box;
+}
+.categoryLink:hover{
+   color: rgb(154, 105, 41);
+}
+.categoryLink{
+    text-decoration: none;
+    color:black;
+    border-radius: 15px;
+    padding:5px;
+    margin: 0 35px;
+}
+#PRcategoryList{
+    border:1px solid lightgray;
+    border-radius:8px;
+    margin-right: 10px;
+}
+.carosel-button {
+    border-radius: 8px;
+    background-color: rgba(0, 106, 42, 0.9);
+    color:white;
+    height: 25px;
+    aspect-ratio: 1/1;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    font-weight: 600;
+    cursor: pointer;
+}
+.carosel-button:hover{
+    opacity: 0.7;
+}
+.categoryListBox{
+    overflow: hidden;
+}
+.categoryListBoxChilld{
+    display: flex;
+    transition:transform 0.7s ;
+}
+.products{
+     /* 상품 전체높이*/
+    max-height:55vh;
+    min-height:40vh;
+    overflow: auto;
+    overflow-x: hidden;
+}
+.products::-webkit-scrollbar {
+    width: 12px;
+  }
+.products::-webkit-scrollbar-track {
+    background-color: lightgray;
+    border-radius: 5px;
+  }
+.products::-webkit-scrollbar-thumb {
+    background-color: rgba(0, 106, 42, 0.9);
+    border-radius: 5px;
+  }
+  @media (max-width: 767px) {
+    .categoryList{
+        font-size: 0.7rem;
+        font-weight: 600;
+        font-family: initial;
+        margin: 0 1px;
+        padding:1px 0;
+    }
+    .categoryLink{
+        padding:10px;
+        margin: 0 10px;
+    }
+    .categoryListBox{
+        width:70%;
+        height:150%;
+        padding-top: 10px;
+    }
+    .categoryBox{
+        padding-bottom: 20px;
+    }
+  }

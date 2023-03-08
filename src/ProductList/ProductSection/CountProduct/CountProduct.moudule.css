@@ -1,0 +1,10 @@
+.pCount{
+    margin-top:8px;
+  }
+#countBtn{
+    width:20px;
+    height:20px;
+    padding:0px;
+    text-align:center;
+    cursor: pointer;
+  }

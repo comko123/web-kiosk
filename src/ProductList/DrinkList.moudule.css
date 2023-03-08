@@ -1,0 +1,93 @@
+  #detailOutBox{
+    position:fixed;
+    top:0px;
+    right:0px;
+    width:100vw;
+    height:100vh;
+    background-color:rgba(0,0,0,0.5);
+    opacity:1;
+  }
+  .detailInBox{
+    position:fixed;
+     width:45vw;
+     height:84vh;
+     background-color:white;
+     border-radius:15px;
+     top:10vh; 
+     left:27vw;
+     border-radius:8px !important;
+     overflow: auto;
+  }
+
+  .detailInBox::-webkit-scrollbar {
+    width: 12px;
+  }
+  .detailInBox::-webkit-scrollbar-track {
+    background-color: lightgray;
+    border-radius: 5px;
+  }
+  .detailInBox::-webkit-scrollbar-thumb {
+    background-color: rgba(0, 106, 42, 0.9);
+    border-radius: 5px;
+  }
+
+  .detailBoxLayOut{
+    display:grid;
+    gap:20px;
+    height:100%;
+    grid-template-columns:45% 55%;
+    grid-template-rows:repeat(2,32em);
+  }
+  .detailBoxImg{
+  background-position:center;
+  border-radius:8px;
+  background-size: cover;
+}
+  .detailBoxSummary{
+    margin:15px 0px;
+    width:80%;
+  }
+.detailBoxSummaryCategory{
+  text-align: center;
+}
+.detailBoxSummaryPR{
+  display:flex;
+  flex-direction:column;
+}
+.price{
+  margin-bottom: 6px;
+}
+.pDescription{
+  min-height:32%;
+  max-height:32%;
+  overflow: auto;
+  overflow-x: hidden;
+  text-align: justify;
+}
+#listBox{
+  border:1px solid lightgray;
+  border-radius:8px;
+  margin-right: 10px;
+}
+.pDescription::-webkit-scrollbar {
+  width: 12px;
+}
+.pDescription::-webkit-scrollbar-track {
+  background-color: lightgray;
+  border-radius: 5px;
+}
+.pDescription::-webkit-scrollbar-thumb {
+  background-color: rgba(0, 106, 42, 0.9);
+  border-radius: 5px;
+}
+@media(max-width: 767px){
+  .detailInBox{
+     width:80vw;
+     height:80vh;
+     left:8vw;
+  }
+  .pDescription{
+   min-height:36%; 
+   max-height:36%;
+  }
+}
