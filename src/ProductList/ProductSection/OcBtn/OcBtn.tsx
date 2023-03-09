@@ -1,13 +1,7 @@
 import { useNavigate } from "react-router-dom"
 import { useRecoilState, useRecoilValue } from "recoil"
-import { itemsState, productsState } from "../../../atom"
-import { ISelectMenu } from "../../../Main"
+import { itemsState, productsState } from "@atom"
 import "./OcBtn.moudule.css"
-interface IOcBtnProps{
-    productId:string
-    optionState:string
-    countState:number
-}
 
 const OcBtn = ({productId,optionState,countState}:IOcBtnProps) => {
     const [items,setItems] = useRecoilState(itemsState)

@@ -3,22 +3,7 @@ import 'bootstrap/dist/css/bootstrap.css'
 import ProductList from "./ProductList/ProductList"
 import Summary from "./Order/Summary"
 import { Link } from 'react-router-dom'
-export interface ISelectMenu{
-    productId:string,
-    productName:string,
-    category:string,
-    price:number,
-    description:string,
-    imgUrl:string,
-    option?:"ice"|"Hot"
-    phoneNumber?:number,
-    count?:number
-}
-export interface IOrder{
-orderItems?:ISelectMenu[]
-phoneNumber:number|null
-receiveType:string
-}
+
 const Main = () => {
 
 return (<><div className="container-fluid">

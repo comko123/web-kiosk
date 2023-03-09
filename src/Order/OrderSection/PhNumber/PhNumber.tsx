@@ -1,5 +1,5 @@
 import { useRecoilState } from "recoil"
-import { userData } from "../../../atom"
+import { userData } from "@atom"
 import "./PhNumber.moudule.css"
 
 const PhNumber = () => {

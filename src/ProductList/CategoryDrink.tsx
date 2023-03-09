@@ -1,12 +1,9 @@
 import DrinkList from "./DrinkList"
 import { useEffect, useState } from "react"
 import { useParams } from "react-router-dom"
-import { ISelectMenu } from "../MainIndex"
 import { useRecoilValue } from "recoil"
-import { productsState } from "../atom"
-export interface ICategoryDrinkOutlet {
-    products:ISelectMenu[]
-}
+import { productsState } from "@atom"
+
 const CategoryDrink = () => {
 const {drink} = useParams()
 const [categoryResult,setCategoryResult] = useState<ISelectMenu[]>([])

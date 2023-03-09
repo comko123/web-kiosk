@@ -1,7 +1,7 @@
 import SummaryItem from "./SummaryItem"
 import "./CancleBtn.moudule.css"
 import { useRecoilState } from "recoil"
-import { itemsState } from "../../../atom"
+import { itemsState } from "@atom"
 
 const CancleBtn = () => {
 const [items,setItems] = useRecoilState(itemsState)

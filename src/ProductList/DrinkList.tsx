@@ -2,7 +2,6 @@
 import Product  from "./Product"
 import "./DrinkList.moudule.css"
 import { Helmet } from "react-helmet"
-import { ISelectMenu } from "../MainIndex"
 import { useEffect, useState } from "react"
 import OcBtn from "./ProductSection/OcBtn/OcBtn"
 import { AnimatePresence,motion } from "framer-motion"
@@ -10,10 +9,7 @@ import CountProduct from "./ProductSection/CountProduct/CountProduct"
 import ProductOption from "./ProductSection/ProductOption/ProductOption"
 import DefaultOption from "./ProductSection/ProductOption/DefaultOption"
 import { useMatch, useNavigate, useParams, useSearchParams } from "react-router-dom"
-interface IDrinkListProps{
-    link:string,
-    locationProducts:ISelectMenu[]
-}
+
 const DrinkList = ({locationProducts,link}:IDrinkListProps) => {
     const match = useMatch(link)
     const[searchparms,_] = useSearchParams()

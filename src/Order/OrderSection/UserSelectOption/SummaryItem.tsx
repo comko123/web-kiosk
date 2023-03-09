@@ -1,9 +1,5 @@
 import "./SummaryItem.moudule.css"
-interface ISummaryItemProps {
-productName:string|null
-option?:"ice"|"Hot"
-count?:number
-}
+
 const SummaryItem = ({productName,option,count}:ISummaryItemProps)=> {
     return (<div className="row textcol-span"id="pow">
     <h6 className="p-0 textcol-span"id="paw" >{productName}&nbsp;<br/>  
