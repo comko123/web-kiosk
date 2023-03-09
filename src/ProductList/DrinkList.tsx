@@ -26,7 +26,7 @@ const DrinkList = ({locationProducts,link}:IDrinkListProps) => {
     return(<>
     <Helmet title={match?drinkInfo?.category+"/"+drinkInfo?.productName:drink?drink:"StarBucks"}/>
     <ul className="list-group products">
-    {locationProducts.map(v =><li key={v.productId} className="list-group-item d-flex mt-3" id="listBox">
+    {locationProducts.map(v =><li key={v.productId} className="list-group-item d-flex" id="listBox">
     <Product {...v} /></li>)}</ul><AnimatePresence>{match?
     <>
     <motion.div id="detailOutBox" onClick={()=>navigate(-1)} animate={{opacity:1}} exit={{opacity:0}}/>
