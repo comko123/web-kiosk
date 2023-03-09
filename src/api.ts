@@ -13,5 +13,7 @@ export const inputProductList = async() => {
 }
 export const outputProductList = async(orderItems: ISelectMenu[],phoneNumber:number|null,receiveType:string) => {
     const orderList = new userOrderList(orderItems,phoneNumber,receiveType)
-    await(await axios.post('http://localhost:8080/api/v1/orders',orderList)).data
+    orderList.orderItems.length?await(await axios.post('http://localhost:8080/api/v1/orders',orderList)).data
+    :alert("아이템을 선택 해주세요...")
+    
 }
