@@ -1,4 +1,3 @@
-import { ISelectMenu } from "@MainIndex"
 import BtnList from "./OrderSection/BtnList/BtnList"
 import CancleBtn from "./OrderSection/UserSelectOption/CancleBtn"
 import PhNumber from "./OrderSection/PhNumber/PhNumber"
@@ -7,11 +6,7 @@ import { useMutation } from "react-query"
 import { outputProductList } from "@api"
 import { useRecoilValue } from "recoil"
 import { itemsState, userData } from "@atom"
-export interface IUserInfo{
-receiveType:string
-phoneNumber:number|null
-orderItems?:ISelectMenu[]
-}
+
 const totalPrice =(items:ISelectMenu[]):number=> {
     return items.reduce((prev, curr) => 
     prev + (curr.count ? curr.price * curr.count:curr.price *1), 0)}

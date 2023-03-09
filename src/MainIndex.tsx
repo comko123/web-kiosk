@@ -8,22 +8,7 @@ import { Link } from 'react-router-dom'
 import { useEffect } from 'react'
 import { useSetRecoilState } from 'recoil'
 import { productsState } from './atom'
-export interface ISelectMenu{
-    productId:string,
-    productName:string,
-    category:string,
-    price:number,
-    description:string,
-    imgUrl:string,
-    option?:"ice"|"Hot"
-    phoneNumber?:number,
-    count?:number
-}
-export interface IOrder{
-orderItems?:ISelectMenu[]
-phoneNumber:number|null
-receiveType:string
-}
+
 const Main = () => {
     const {isLoading,data,error} = useQuery<ISelectMenu[]>("Product List",inputProductList,{refetchInterval:5*60*1000,refetchOnWindowFocus:false,suspense:true})
     const setProducts = useSetRecoilState(productsState)

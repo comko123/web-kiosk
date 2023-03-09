@@ -1,11 +1,6 @@
 import { useRecoilState } from "recoil"
 import { userData } from "@atom"
 
-interface IVTbuttonProps {
-vt:string,
-receiveType:"STORE"|"TAKEOUT"
-}
-
 const redius = {borderRadius:"8px",border:"none"}
 const VTbutton = ({vt,receiveType}:IVTbuttonProps) => {
     const [data,setData] = useRecoilState(userData)

@@ -1,5 +1,4 @@
 import axios from "axios"
-import { ISelectMenu } from "./MainIndex"
 
 class userOrderList{
 orderItems;phoneNumber;receiveType;   

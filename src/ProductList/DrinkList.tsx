@@ -8,11 +8,7 @@ import OcBtn from "./ProductSection/OcBtn/OcBtn"
 import CountProduct from "./ProductSection/CountProduct/CountProduct"
 import ProductOption from "./ProductSection/ProductOption/ProductOption"
 import DefaultOption from "./ProductSection/ProductOption/DefaultOption"
-import { ISelectMenu } from "@MainIndex"
-interface IDrinkListProps{
-    link:string,
-    locationProducts:ISelectMenu[]
-}
+
 const DrinkList = ({locationProducts,link}:IDrinkListProps) => {
     const match = useMatch(link)
     const[searchparms,_] = useSearchParams()

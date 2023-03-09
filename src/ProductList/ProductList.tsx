@@ -14,6 +14,11 @@ const carousel = (result:number,categoryBoxRef:React.RefObject<HTMLDivElement>
     categoryBoxRef.current.style.transform = `translate(${result}vw)`
     setCategoryCarousel(result)
 } 
+
+const scope = (categoryCarousel:number,category:string[]) => categoryCarousel>=-category.length*10&&
+categoryCarousel>=-category.length*10+10&&
+categoryCarousel>=-category.length*10+20
+
 const  ProductList = ()=> {
     const [category,setCategory] = useState<string[]>([])
     const {pathname} = useLocation()
@@ -21,9 +26,7 @@ const  ProductList = ()=> {
     const [categoryCarousel,setCategoryCarousel]=useState(0)
     const products = useRecoilValue(productsState)
     const categoryBoxRef = useRef<HTMLDivElement>(null)
-    const scope = categoryCarousel>=-category.length*10&&
-    categoryCarousel>=-category.length*10+10&&
-    categoryCarousel>=-category.length*10+20
+
     useEffect(()=>{
     if(!!products){products.map(item=>setCategory(state=>{
     const categoryState = [...state,item.category]
@@ -41,7 +44,7 @@ const  ProductList = ()=> {
     {item}</Link></div>)}</div></fieldset> 
     <div className="carosel-button" 
     onClick={()=>{const res =  carouselOperation(categoryCarousel,-30)
-    if(scope)carousel(res,categoryBoxRef,setCategoryCarousel)}}>&#62;</div></div>
+    if(scope(categoryCarousel,category))carousel(res,categoryBoxRef,setCategoryCarousel)}}>&#62;</div></div>
     {pathname==="/"? <ul className="list-group products">
     {products.map(v =><li id="PRcategoryList"
     key={v.productId} className="list-group-item d-flex mt-3">

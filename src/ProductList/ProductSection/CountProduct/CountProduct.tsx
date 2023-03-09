@@ -1,9 +1,6 @@
 import React from "react"
 import "./CountProduct.moudule.css"
-interface ICountProductProps{
-    countState:number
-    setCountState:(state:number)=>void
-}
+
 const CountProduct = ({setCountState,countState}:ICountProductProps) => {
     return( <div className="pCount textcol-span">수량&nbsp;:&nbsp;
     {["-","+"].map((item,index)=><React.Fragment key={item}><button 

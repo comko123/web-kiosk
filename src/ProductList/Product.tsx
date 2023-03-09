@@ -1,13 +1,7 @@
 import { useNavigate, useParams } from "react-router"
 import {motion} from "framer-motion"
 import "./Product.moudule.css"
-interface IProductProps{
-    imgUrl:string
-    productId:string
-    productName:string
-    category:string
-    price:number
-}
+
 const  Product = ({imgUrl,productId,productName,category,price}:IProductProps) => {
     const navigate = useNavigate()
     const {drink} = useParams()
