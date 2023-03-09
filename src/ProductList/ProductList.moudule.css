@@ -58,6 +58,9 @@
     overflow: auto;
     overflow-x: hidden;
 }
+.products>li:nth-child(n+2){
+    margin-top: 1rem;
+}
 .products::-webkit-scrollbar {
     width: 12px;
   }

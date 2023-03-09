@@ -47,7 +47,7 @@ const  ProductList = ()=> {
     if(scope(categoryCarousel,category))carousel(res,categoryBoxRef,setCategoryCarousel)}}>&#62;</div></div>
     {pathname==="/"? <ul className="list-group products">
     {products.map(v =><li id="PRcategoryList"
-    key={v.productId} className="list-group-item d-flex mt-3">
+    key={v.productId} className="list-group-item d-flex">
     <Product {...v} /></li>)}</ul> :null}
     <Outlet/></>)}
     export default ProductList
