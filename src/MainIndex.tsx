@@ -10,7 +10,9 @@ import { useSetRecoilState } from 'recoil'
 import { productsState } from './atom'
 
 const Main = () => {
-    const { isLoading, data, error } = useQuery<ISelectMenu[]>("Product List", inputProductList, { refetchInterval: 5 * 60 * 1000, refetchOnWindowFocus: false, suspense: true })
+    const { isLoading, data, error } = useQuery<ISelectMenu[]>("Product List", 
+    inputProductList, { refetchInterval: 5 * 60 * 1000, 
+        refetchOnWindowFocus: false, suspense: true })
     const setProducts = useSetRecoilState(productsState)
     useEffect(() => {
         setProducts(data as ISelectMenu[])
