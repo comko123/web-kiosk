@@ -1,8 +1,9 @@
-import DrinkList from "./DrinkList"
+// import DrinkList from "@DrinkList"
 import { useEffect, useState } from "react"
 import { useParams } from "react-router-dom"
 import { useRecoilValue } from "recoil"
 import { productsState } from "@atom"
+import DrinkList from "@DrinkList"
 
 const CategoryDrink = () => {
     const { drink } = useParams()

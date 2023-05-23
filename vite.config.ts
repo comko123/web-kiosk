@@ -6,9 +6,25 @@ export default defineConfig({
   plugins: [react()],
   resolve:{
     alias:[
-      {find:"@api",replacement:"/src/api"},
-      {find:"@atom",replacement:"/src/atom"},
-      { find: "@", replacement: "/src" },
+      {find:"@",replacement:"/src"},
+      {find:"@api",replacement:"@/api"},
+      {find:"@atom",replacement:"@/atom"},
+      {find:"@ProductOption",replacement:"@/components/product_option/ProductOption"},
+      {find:"@CountProduct",replacement:"@/components/count_product/CountProduct"},
+      {find:"@DefaultOption",replacement:"@/components/default_option/DefaultOption"},
+      {find:"@OcBtn",replacement:"@/components/submit_btn/OcBtn"},
+      {find:"@Product",replacement:"@/components/product/Product"},
+      {find:"@CancleBtn",replacement:"@/components/cancle_btn/CancleBtn"},
+      {find:"@BtnList",replacement:"@/components/another_btn/BtnList"},
+      {find:"@PhNumber",replacement:"@/components/ph_number/PhNumber"},
+      {find:"@DrinkList",replacement:"@/components/drink_list/DrinkList"},
+      {find:"@ProductList",replacement:"@/components/product_list/ProductList"},
+      {find:"@Summary",replacement:"@/components/summary/Summary"},
+      {find:"@SummaryItem",replacement:"@/components/summary_item/SummaryItem"},
+      {find:"@MainIndex",replacement:"@/pages/main_section/MainIndex"},
+      {find:"@CategoryDrink",replacement:"@/pages/ctg_section/CategoryDrink"},
+      {find:"@AllDrink",replacement:"@/pages/all_section/AllDrink"}
+
     ]
   }
 })

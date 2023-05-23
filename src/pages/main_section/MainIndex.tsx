@@ -1,13 +1,13 @@
 import './Main.moudule.css'
 import 'bootstrap/dist/css/bootstrap.css'
-import ProductList from "./ProductList/ProductList"
-import Summary from "./Order/Summary"
+import ProductList from "@ProductList"
+import Summary from "@Summary"
 import { useQuery } from 'react-query'
-import { inputProductList } from './api'
+import { inputProductList } from '@api'
 import { Link } from 'react-router-dom'
 import { useEffect } from 'react'
 import { useSetRecoilState } from 'recoil'
-import { productsState } from './atom'
+import { productsState } from '@atom'
 
 const Main = () => {
     const { isLoading, data, error } = useQuery<ISelectMenu[]>("Product List", 

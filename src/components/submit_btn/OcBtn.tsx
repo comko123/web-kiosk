@@ -24,7 +24,7 @@ const OcBtn = ({ productId, optionState, countState }: IOcBtnProps) => {
         style={{ backgroundColor: index ? "tomato" : "rgba(0, 106, 42, 0.9)" }}
         onClick={() => {
             if (index) { navigate(-1) } else {
-                if (!optionState) { alert("옵션을 선택해 주세요.") }
+                if (!optionState) alert("옵션을 선택해 주세요.") 
                 else { handleAddClicked(productId, optionState, countState); navigate(-1) }
             }
         }} />)}</div>)
