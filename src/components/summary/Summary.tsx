@@ -1,20 +1,23 @@
-import BtnList from "./OrderSection/BtnList/BtnList"
-import CancleBtn from "./OrderSection/UserSelectOption/CancleBtn"
-import PhNumber from "./OrderSection/PhNumber/PhNumber"
+// import CancleBtn from "@CancleBtn"
 import "./Summary.moudule.css"
 import { useMutation } from "react-query"
 import { useRecoilValue } from "recoil"
 import { itemsState, userData } from "@atom"
 import { outputProductList } from "@api"
+import CancleBtn from "@CancleBtn"
+// import BtnList from "../another_btn/BtnList"
+// import PhNumber from "../ph_number/PhNumber"
+import BtnList from "@BtnList"
+import PhNumber from "@PhNumber"
 const totalPrice =(items:ISelectMenu[]):number=> {
     return items.reduce((prev, curr) => 
     prev + (curr.count ? curr.price * curr.count:curr.price *1), 0)}
 
 const Summary = () => {
     const items = useRecoilValue(itemsState)
-    const data = useRecoilValue(userData)
+    const {phoneNumber,receiveType} = useRecoilValue(userData)
     const {mutate} = useMutation("UserSelectOrderList",
-    ()=>outputProductList(items,data.phoneNumber,data.receiveType),
+    ()=>outputProductList(items,phoneNumber,receiveType),
 /* {onError: () => { alert('서버 장애') },
     onSuccess: () => { alert('주문이 정상적으로 접수되었습니다.');window.location.replace('/')}}*/)
     return (<><div className="summartBox">

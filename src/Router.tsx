@@ -1,13 +1,13 @@
 import App from "./App"
 import { createBrowserRouter } from "react-router-dom"
 import { lazy, Suspense } from "react"
-const MainIndex = lazy(() => import("./MainIndex"))
-const AllDrink = lazy(() => import("./ProductList/AllDrink"))
-const CategoryDrink = lazy(() => import("./ProductList/CategoryDrink"))
+const MainIndex = lazy(() => import("@MainIndex"))
+const AllDrink = lazy(() => import("@AllDrink"))
+const CategoryDrink = lazy(() => import("@CategoryDrink"))
 const Router = createBrowserRouter([{
     path: "/", element: <App />, children: [
         {
-            path: "", element: <Suspense fallback="loading..."><MainIndex /></Suspense>, children: [{
+            path: "", element: <Suspense fallback="loading..."><MainIndex/></Suspense>, children: [{
                 path: "productName", element: <Suspense fallback="loading..."><AllDrink /></Suspense>
             },
             {

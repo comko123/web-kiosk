@@ -1,4 +1,4 @@
-import SummaryItem from "./SummaryItem"
+import SummaryItem from "@SummaryItem"
 import "./CancleBtn.moudule.css"
 import { useRecoilState } from "recoil"
 import { itemsState } from "@atom"

@@ -17,11 +17,25 @@
     "jsx": "react-jsx",
     "baseUrl": ".",
     "paths": {
+      "@/*": ["src/*"],
       "@atom": ["src/atom"],
       "@api": ["src/api"],
-      "@/*": ["src/*"]
-    
-  },
+      "@ProductOption":["src/components/product_option/ProductOption"],
+      "@CountProduct":["src/components/count_product/CountProduct"],
+      "@DefaultOption":["src/components/default_option/DefaultOption"],
+      "@OcBtn":["src/components/submit_btn/OcBtn"],
+      "@Product":["src/components/product/Product"],
+      "@CancleBtn":["src/components/cancle_btn/CancleBtn"],
+      "@BtnList":["src/components/another_btn/BtnList"],
+      "@PhNumber":["src/components/ph_number/PhNumber"],
+      "@DrinkList":["src/components/drink_list/DrinkList"],
+      "@ProductList":["src/components/product_list/ProductList"],
+      "@Summary":["src/components/summary/Summary"],
+      "@SummaryItem":["src/components/summary_item/SummaryItem"],
+      "@MainIndex":["src/pages/main_section/MainIndex"],
+      "@CategoryDrink":["src/pages/ctg_section/CategoryDrink"],
+      "@AllDrink":["src/pages/all_section/AllDrink"],
+    },
   },
   "include": ["src"],
   "references": [{ "path": "./tsconfig.node.json" }]

@@ -1,8 +1,8 @@
+import ProductList from '@ProductList'
 import './MainIndex.moudule.css'
 import 'bootstrap/dist/css/bootstrap.css'
-import ProductList from "./ProductList/ProductList"
-import Summary from "./Order/Summary"
 import { Link } from 'react-router-dom'
+import Summary from '@Summary'
 
 const Main = () => {
 
