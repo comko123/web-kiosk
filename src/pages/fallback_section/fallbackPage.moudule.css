@@ -1,0 +1,20 @@
+.fbk_contanier {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.spinner_contanier {
+    border: 2px solid rgb(3, 81, 33);
+    padding:20px;
+    display:flex;
+    align-items:center;
+    border-radius:5px;
+    box-shadow: 5px 5px 5px 5px rgb(234, 231, 231);
+}
+
+.text_contanier{
+    font-weight:bold;
+    margin:0px 20px;
+}

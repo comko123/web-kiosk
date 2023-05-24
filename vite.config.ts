@@ -23,8 +23,8 @@ export default defineConfig({
       {find:"@SummaryItem",replacement:"@/components/summary_item/SummaryItem"},
       {find:"@MainIndex",replacement:"@/pages/main_section/MainIndex"},
       {find:"@CategoryDrink",replacement:"@/pages/ctg_section/CategoryDrink"},
-      {find:"@AllDrink",replacement:"@/pages/all_section/AllDrink"}
-
+      {find:"@AllDrink",replacement:"@/pages/all_section/AllDrink"},
+      {find:"@Fallback",replacement:"@/pages/fallback_section/FallbackPage"}
     ]
   }
 })
