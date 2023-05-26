@@ -36,6 +36,7 @@
       "@CategoryDrink":["src/pages/ctg_section/CategoryDrink"],
       "@AllDrink":["src/pages/all_section/AllDrink"],
       "@Fallback":["src/pages/fallback_section/FallbackPage"],
+      "@Error":["src/pages/error_section/ErrorElement"]
     },
   },
   "include": ["src"],

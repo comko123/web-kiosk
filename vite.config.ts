@@ -24,7 +24,8 @@ export default defineConfig({
       {find:"@MainIndex",replacement:"@/pages/main_section/MainIndex"},
       {find:"@CategoryDrink",replacement:"@/pages/ctg_section/CategoryDrink"},
       {find:"@AllDrink",replacement:"@/pages/all_section/AllDrink"},
-      {find:"@Fallback",replacement:"@/pages/fallback_section/FallbackPage"}
+      {find:"@Fallback",replacement:"@/pages/fallback_section/FallbackPage"},
+      {find:"@Error",replacement:"@/pages/error_section/ErrorElement"}
     ]
   }
 })
