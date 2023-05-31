@@ -5,7 +5,7 @@ import "./Product.moudule.css"
 const  Product = ({imgUrl,productId,productName,category,price}:IProductProps) => {
     const navigate = useNavigate()
     const {drink} = useParams()
-    return (<><div className="col-2"><img src={imgUrl} alt="" style={{borderRadius:"8px"}}/></div>
+    return (<><div className="col-2"><img src={imgUrl} alt="" loading="lazy" style={{borderRadius:"8px"}}/></div>
     <div className="col"><div className="row colspan media-margin eclips">{productName}</div>
     <div className="row text-muted colspan">{category}</div></div>
     <div className="col price text-site colspan">{price}원</div>

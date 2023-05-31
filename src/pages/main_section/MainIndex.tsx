@@ -1,4 +1,4 @@
-import './Main.moudule.css'
+import './MainIndex.moudule.css'
 import 'bootstrap/dist/css/bootstrap.css'
 import ProductList from "@ProductList"
 import Summary from "@Summary"
@@ -20,7 +20,7 @@ const Main = () => {
     return (<><div className="container-fluid">
         <div className="row justify-content-center m-4">
             <div style={{ textAlign: "center" }}><Link to="/" className='mainText'>
-                <img src="https://image.istarbucks.co.kr/common/img/common/favicon.ico?v=200828" alt='' />
+                <img src="https://image.istarbucks.co.kr/common/img/common/favicon.ico?v=200828" loading="lazy" alt='' />
             </Link></div></div><div className="card"><div className="row">
                 {isLoading ? <h3>상품 목록을 가져오는중 입니다...</h3> : error ?
                     <h3>상품 목록을 가져오는데 실패 했습니다.</h3> :
