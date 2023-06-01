@@ -32,11 +32,11 @@
       "@ProductList":["src/components/product_list/ProductList"],
       "@Summary":["src/components/summary/Summary"],
       "@SummaryItem":["src/components/summary_item/SummaryItem"],
-      "@MainIndex":["src/pages/main_section/MainIndex"],
-      "@CategoryDrink":["src/pages/ctg_section/CategoryDrink"],
-      "@AllDrink":["src/pages/all_section/AllDrink"],
-      "@Fallback":["src/pages/fallback_section/FallbackPage"],
-      "@Error":["src/pages/error_section/ErrorElement"]
+      "@MainIndex":["src/pages/main_section/index"],
+      "@CategoryDrink":["src/pages/ctg_section/index"],
+      "@AllDrink":["src/pages/all_section/index"],
+      "@Fallback":["src/pages/fallback_section/index"],
+      "@Error":["src/pages/error_section/index"]
     },
   },
   "include": ["src"],
