@@ -1,4 +1,4 @@
 interface IUserData {
-    receiveType:"STORE"|"TAKEOUT",
+    receiveType:string,
     phoneNumber:number|null
 }
